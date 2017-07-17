@@ -1,0 +1,69 @@
+/* pages/list/list.wxss */
+
+.imgClass {
+  width: 100vw;
+  height: 150px;
+}
+
+.brand_pic {
+  width: 45rpx;
+  height: 45rpx;
+}
+.brand_p{
+line-height:45rpx;
+}
+.brand-list {}
+
+.brand-list .section-item {}
+
+.brand-list .section-item .section-item-header {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #a8a8a8;
+  background-color: #f2f4f5;
+  padding: 4rpx 20rpx;
+}
+
+.brand-list .section-item .section-item-cells {
+  padding-left: 28rpx;
+  align-items: center;
+}
+.brand_pic{
+  padding-right: 16rpx;
+}
+.brand-list .section-item .section-item-cells .section-item-cell {
+  font-size: 32rpx;
+  line-height: 1.0;
+  color: #333333;
+  padding: 28rpx 0;
+  font-family: "Times New Roman";
+  display:flex;
+}
+
+.border-bottom {
+  border-bottom: 1rpx solid #dbdbdb;
+}
+
+.brand-selector {
+  position: absolute;
+  top: 170px;
+  right: 0;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.brand-selector .selector-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #43c1f4;
+  padding: 3px 3px;
+  height: 12px;
+}

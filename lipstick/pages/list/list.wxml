@@ -1,0 +1,28 @@
+<!--pages/list/list.wxml-->
+<scroll-view scroll-y style="height: {{windowHeight}}" scroll-into-view="{{alpha}}">
+  <view class="picture">
+    <image class="imgClass" model="aspectFit" src="/images/picture2.png"></image>
+  </view>
+  <view class="brand">
+    <view class="brand-list">
+      <view wx:for="{{list}}" wx:key="unique" id="{{item.brand}}" class="section-item">
+        <view class="section-item-header">
+          {{item.brand}}
+        </view>
+        <view wx:for="{{item.datas}}" wx:key="unique" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells">
+          <navigator url="../detail/detail" redirect="false" hover-class="navigator-hover">
+            <view class="section-item-cell {{cellIndex != (item.datas.length-1) ? 'border-bottom':''}}">
+              <image class="brand_pic" src="{{cell.img}}"/>
+              <text class="brand_p">{{cell.text}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view data-id="selector" catchtouchstart="handlerBrandTap" catchtouchmove="handlerMove" class="brand-selector">
+  <view data-ap="{{item.brand}}" wx:for="{{list}}" wx:key="unique" class="selector-one">
+    {{item.brand}}
+  </view>
+</view>

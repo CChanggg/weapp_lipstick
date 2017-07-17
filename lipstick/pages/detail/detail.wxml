@@ -1,0 +1,29 @@
+<!--pages/we/we.wxml-->
+<scroll-view class="page-body" scroll-y="true">
+  <view class="container" wx:for="{{details}} ">
+    <view class="meta">
+      <view class="poster">
+        <image class="imgClass" model="aspectFit" src="{{image}}" />
+      </view>
+      <view class="brand_name">{{name}}</view>
+      <view class="brand_price">参考价格:￥
+        <block>{{price}}</block>
+      </view>
+    </view>
+    <view class="summary">
+      <text class="label">{{label}}</text>
+      <text class="hot">热卖色号：{{hot}}</text>
+      <view class="line"></view>
+    </view>
+
+    <view class="box">
+      <button type="default" bindtap="btn_change1" class="button1" style="color: #818181;">小胖丁</button>
+      <button type="default" bindtap="btn_change2" class="button2" style="color: #818181;">红管唇釉</button>
+      <button type="default" bindtap="btn_change3" class="button3" style="color: #818181;">红管CC唇膏</button>
+      <button type="default" bindtap="btn_change4" class="button4" style="color: #818181;">黑管唇釉</button>
+    </view>
+    <view class="content">
+      <image class="brand_pic" src="{{pic}}" />
+    </view>
+  </view>
+</scroll-view>
